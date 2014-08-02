@@ -11,6 +11,8 @@
     <AssemblyName>PRMasterServer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +83,8 @@
     <Compile Include="Data\AddressInfo.cs" />
     <Compile Include="Data\GeoIP.cs" />
     <Compile Include="Data\LoginDatabase.cs" />
+    <Compile Include="Servers\NatNegMessage.cs" />
+    <Compile Include="Servers\ServerNatNeg.cs" />
     <Compile Include="Servers\LoginServer.cs" />
     <Compile Include="Servers\CDKeyServer.cs" />
     <Compile Include="Servers\LoginServerMessages.cs" />
@@ -120,4 +124,5 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>

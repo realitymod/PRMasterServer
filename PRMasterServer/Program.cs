@@ -25,34 +25,44 @@ namespace PRMasterServer
 				}
 			};
 
-			IPAddress bind = IPAddress.Any;
-			if (args.Length >= 1) {
-				for (int i = 0; i < args.Length; i++) {
-					if (args[i].Equals("+bind")) {
-						if ((i >= args.Length - 1) || !IPAddress.TryParse(args[i + 1], out bind)) {
-							LogError("+bind value must be a valid IP Address to bind to!");
-						}
-					} else if (args[i].Equals("+db")) {
-						if ((i >= args.Length - 1)) {
-							LogError("+db value must be a path to the database");
-						} else {
-							LoginDatabase.Initialize(args[i + 1], log, logError);
-						}
-					}
-				}
-			}
+            IPAddress bind = IPAddress.Any;
+            if (args.Length >= 1)
+            {
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i].Equals("+bind"))
+                    {
+                        if ((i >= args.Length - 1) || !IPAddress.TryParse(args[i + 1], out bind))
+                        {
+                            LogError("+bind value must be a valid IP Address to bind to!");
+                        }
+                    }
+                    //else if (args[i].Equals("+db"))
+                    //{
+                    //    if ((i >= args.Length - 1))
+                    //    {
+                    //        LogError("+db value must be a path to the database");
+                    //    }
+                    //    else
+                    //    {
+                    //        LoginDatabase.Initialize(args[i + 1], log, logError);
+                    //    }
+                    //}
+                }
+            }
 
-			if (!LoginDatabase.IsInitialized()) {
-				LogError("Error initializing database, please confirm parameter +db is valid");
-				LogError("Press any key to continue");
-				Console.ReadKey();
-				return;
-			}
+            //if (!LoginDatabase.IsInitialized()) {
+            //    LogError("Error initializing database, please confirm parameter +db is valid");
+            //    LogError("Press any key to continue");
+            //    Console.ReadKey();
+            //    return;
+            //}
 
-			CDKeyServer cdKeyServer = new CDKeyServer(bind, 29910, log, logError);
-			ServerListReport serverListReport = new ServerListReport(bind, 27900, log, logError);
-			ServerListRetrieve serverListRetrieve = new ServerListRetrieve(bind, 28910, serverListReport, log, logError);
-			LoginServer loginServer = new LoginServer(bind, 29900, 29901, log, logError);
+            //CDKeyServer cdKeyServer = new CDKeyServer(bind, 29910, log, logError);
+            //ServerListReport serverListReport = new ServerListReport(bind, 27900, log, logError);
+            //ServerListRetrieve serverListRetrieve = new ServerListRetrieve(bind, 28910, serverListReport, log, logError);
+            ServerNatNeg serverNatNeg = new ServerNatNeg(bind, 27901, log, logError);
+            //LoginServer loginServer = new LoginServer(bind, 29900, 29901, log, logError);
 
 			while (true) {
 				Thread.Sleep(1000);
