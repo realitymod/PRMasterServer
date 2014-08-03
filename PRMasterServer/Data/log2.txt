@@ -1,0 +1,1034 @@
+[2014-08-03 19:50:18.903] [NatNegotiation] Loaded GeoLite2-Country.mmdb
+[2014-08-03 19:50:18.906] [NatNegotiation] Starting Nat Neg Listener
+[2014-08-03 19:50:28.107] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 00 01 01 C0 A8 00 C7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.113] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.158] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AABAcCoAMcAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.162] [NatNegotiation] Sending response to 84.215.80.162:2071: FD FC 1E 66 6A B2 03 01 04 03 09 DC 00 01 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:28.162] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AABAcCoAMcAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.173] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 01 01 01 C0 A8 00 C7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.173] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.173] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AEBAcCoAMcAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.174] [NatNegotiation] Sending response to 84.215.80.162:60297: FD FC 1E 66 6A B2 03 01 04 03 09 DC 01 01 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:28.174] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AEBAcCoAMcAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.184] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 02 01 01 C0 A8 00 C7 08 17 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.184] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.185] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AIBAcCoAMcIF2NpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>2</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>2071</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.185] [NatNegotiation] Sending response to 84.215.80.162:60297: FD FC 1E 66 6A B2 03 01 04 03 09 DC 02 01 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:28.185] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AIBAcCoAMcIF2NpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>2</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>2071</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.195] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 03 01 01 C0 A8 00 C7 08 17 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.195] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.196] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AMBAcCoAMcIF2NpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>2071</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.196] [NatNegotiation] Sending response to 84.215.80.162:60297: FD FC 1E 66 6A B2 03 01 04 03 09 DC 03 01 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:28.196] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AMBAcCoAMcIF2NpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>1</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.0.199</PrivateIPAddress>
+  <LocalPort>2071</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.866] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 01 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.866] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.867] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.873] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 15 80 62 EB 89 42 00
+[2014-08-03 19:50:28.874] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>84.215.80.162</ClientPublicIPAddress>
+  <ClientPublicPort>60297</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.874] [NatNegotiation] Sending response to 84.215.80.162:60297: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:28.874] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.874] [NatNegotiation] Sent connect messages to peers with clientId 67307996_1 connecting addresses 184.76.89.124 and 84.215.80.162
+[2014-08-03 19:50:28.884] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 03 00 01 C0 A8 0F F7 08 08 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.884] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.885] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.885] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 15 80 62 EB 89 42 00
+[2014-08-03 19:50:28.885] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>84.215.80.162</ClientPublicIPAddress>
+  <ClientPublicPort>60297</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.885] [NatNegotiation] Sending response to 84.215.80.162:60297: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:28.885] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.885] [NatNegotiation] Sent connect messages to peers with clientId 67307996_3 connecting addresses 184.76.89.124 and 84.215.80.162
+[2014-08-03 19:50:28.896] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 00 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:28.896] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.896] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.896] [NatNegotiation] Sending response to 184.76.89.124:2056: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 15 80 62 08 17 42 00
+[2014-08-03 19:50:28.896] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>84.215.80.162</ClientPublicIPAddress>
+  <ClientPublicPort>2071</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.896] [NatNegotiation] Sending response to 84.215.80.162:2071: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 08 08 42 00
+[2014-08-03 19:50:28.896] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>2056</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.896] [NatNegotiation] Sent connect messages to peers with clientId 67307996_0 connecting addresses 184.76.89.124 and 84.215.80.162
+[2014-08-03 19:50:28.906] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC 00 01 00 00 20 00 00 00 24
+[2014-08-03 19:50:28.906] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.907] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3AABAAAgAAAAJA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.917] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC 00 01 00 00 20 00 00 00 24
+[2014-08-03 19:50:28.917] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.918] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3AABAAAgAAAAJA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:28.929] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC FE 01 FF FF 78 FF 7A 0D 12
+[2014-08-03 19:50:28.929] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:28.929] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3P4B//94/3oNEg==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.365] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 01 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.365] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.365] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.365] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 01 04 03 09 DC 01 00 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:29.365] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.377] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 03 00 01 C0 A8 0F F7 08 08 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.377] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.377] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.377] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 01 04 03 09 DC 03 00 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:29.377] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.387] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 00 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.387] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.388] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.388] [NatNegotiation] Sending response to 184.76.89.124:2056: FD FC 1E 66 6A B2 03 01 04 03 09 DC 00 00 FF FF 6D 16 B5 7D EA
+[2014-08-03 19:50:29.388] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>1</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.905] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 01 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.905] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.906] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.906] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:29.906] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.906] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:29.906] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AEAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>1</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.906] [NatNegotiation] Sent connect messages to peers with clientId 67307996_1 connecting addresses 184.76.89.124 and 184.76.89.124
+[2014-08-03 19:50:29.918] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 03 00 01 C0 A8 0F F7 08 08 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.918] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.918] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.918] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:29.918] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.918] [NatNegotiation] Sending response to 184.76.89.124:57217: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 DF 81 42 00
+[2014-08-03 19:50:29.918] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AMAAcCoD/cICGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>3</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>2056</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>57217</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.918] [NatNegotiation] Sent connect messages to peers with clientId 67307996_3 connecting addresses 184.76.89.124 and 184.76.89.124
+[2014-08-03 19:50:29.928] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 00 04 03 09 DC 00 00 01 C0 A8 0F F7 00 00 63 69 76 34 62 74 73 00
+[2014-08-03 19:50:29.929] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:29.929] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>0</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.929] [NatNegotiation] Sending response to 184.76.89.124:2056: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 08 08 42 00
+[2014-08-03 19:50:29.929] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>2056</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.929] [NatNegotiation] Sending response to 184.76.89.124:2056: FD FC 1E 66 6A B2 03 05 04 03 09 DC 84 76 89 24 08 08 42 00
+[2014-08-03 19:50:29.929] [NatNegotiation] Cleartext response: <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>5</RecordType>
+  <RecordSpecificData>BAMJ3AAAAcCoD/cAAGNpdjRidHMA</RecordSpecificData>
+  <ClientId>67307996</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>1</UseGamePort>
+  <PrivateIPAddress>192.168.15.247</PrivateIPAddress>
+  <LocalPort>0</LocalPort>
+  <GameName>civ4bts</GameName>
+  <ClientPublicIPAddress>184.76.89.124</ClientPublicIPAddress>
+  <ClientPublicPort>2056</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>66</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:29.930] [NatNegotiation] Sent connect messages to peers with clientId 67307996_0 connecting addresses 184.76.89.124 and 184.76.89.124
+[2014-08-03 19:50:30.023] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.023] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.024] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.034] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.035] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.035] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.045] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC FE 00 FF FF 7C FF F2 1A 42
+[2014-08-03 19:50:30.046] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.046] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3P4A//98//IaQg==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.245] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.245] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.246] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.256] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.257] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.257] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.267] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.268] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.268] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.278] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC DC 00 F2 1A 01 00 00 00 00
+[2014-08-03 19:50:30.279] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.279] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3NwA8hoBAAAAAA==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.289] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC FE 00 FF FF 7C FF F2 1A 42
+[2014-08-03 19:50:30.290] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.290] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3P4A//98//IaQg==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:30.300] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 06 04 03 09 DC FE 00 FF FF 7C FF F2 1A 42
+[2014-08-03 19:50:30.301] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:30.301] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>6</RecordType>
+  <RecordSpecificData>BAMJ3P4A//98//IaQg==</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:35.235] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 24 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:35.235] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:35.235] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3CQBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:36.261] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 01 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:36.261] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:36.261] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3AEBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:36.472] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 1E 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:36.472] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:36.473] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3B4AAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:37.287] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 01 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:37.287] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:37.287] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3AEBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:37.420] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:37.421] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:37.421] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:38.287] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 01 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:38.287] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:38.287] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3AEBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:38.434] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:38.434] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:38.435] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:39.500] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:39.500] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:39.500] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:40.370] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 01 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:40.370] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:40.370] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3AEBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:40.532] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:40.532] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:40.533] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:41.366] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 01 01 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:41.366] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:41.366] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3AEBAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:41.515] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:41.515] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:41.515] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>
+[2014-08-03 19:50:42.557] [NatNegotiation] Received bytes: FD FC 1E 66 6A B2 03 0D 04 03 09 DC 81 00 00 06 00 00 00 00 00 00 00 63 69 76 34 62 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[2014-08-03 19:50:42.557] [NatNegotiation] Parsed message:
+[2014-08-03 19:50:42.557] [NatNegotiation] <?xml version="1.0" encoding="utf-16"?>
+<NatNegMessage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Constant>510028466</Constant>
+  <ProtocolVersion>3</ProtocolVersion>
+  <RecordType>13</RecordType>
+  <RecordSpecificData>BAMJ3IEAAAYAAAAAAAAAY2l2NGJ0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</RecordSpecificData>
+  <ClientId>0</ClientId>
+  <SequenceId>0</SequenceId>
+  <Hoststate>0</Hoststate>
+  <UseGamePort>0</UseGamePort>
+  <LocalPort>0</LocalPort>
+  <ClientPublicPort>0</ClientPublicPort>
+  <Error>0</Error>
+  <GotData>0</GotData>
+</NatNegMessage>

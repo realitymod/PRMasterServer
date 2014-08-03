@@ -84,10 +84,12 @@
     <Compile Include="Data\GeoIP.cs" />
     <Compile Include="Data\LoginDatabase.cs" />
     <Compile Include="Servers\NatNegMessage.cs" />
+    <Compile Include="Servers\NatNegPeer.cs" />
     <Compile Include="Servers\ServerNatNeg.cs" />
     <Compile Include="Servers\LoginServer.cs" />
     <Compile Include="Servers\CDKeyServer.cs" />
     <Compile Include="Servers\LoginServerMessages.cs" />
+    <Compile Include="Utils\ChallengeEncryptor.cs" />
     <Compile Include="Utils\DynamicLinq.cs" />
     <Compile Include="Data\GameServer.cs" />
     <Compile Include="Servers\ServerListRetrieve.cs" />
@@ -103,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\log.txt" />
+    <Content Include="Data\log2.txt" />
+    <Content Include="Data\log3.txt" />
     <Content Include="External\Reality.Net.dll" />
     <Content Include="Images\search.ico" />
     <Content Include="x64\SQLite.Interop.dll">

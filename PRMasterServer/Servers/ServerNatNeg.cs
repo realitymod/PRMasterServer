@@ -29,6 +29,7 @@ namespace PRMasterServer.Servers
 		private Socket _socket;
 		private SocketAsyncEventArgs _socketReadEvent;
 		private byte[] _socketReceivedBuffer;
+        private ConcurrentDictionary<int, NatNegClient> _Clients = new ConcurrentDictionary<int,NatNegClient>();
 
 		// 09 then 4 00's then battlefield2
 		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x62, 0x61, 0x74, 0x74, 0x6c, 0x65, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x32, 0x00 };
@@ -133,62 +134,121 @@ namespace PRMasterServer.Servers
 			}
 		}
 
-        private byte[] ProcessMessage(byte[] receivedBytes)
-        {
-            // there by a bunch of different message formats...
-            Log(Category, "Received bytes: ");
-            Log(Category, string.Join(" ", receivedBytes.Select((b) => { return b.ToString("X2"); }).ToArray()));
-            NatNegMessage message = null;
-            try
-            {
-                message = NatNegMessage.ParseData(receivedBytes);
-            }
-            catch (Exception ex)
-            {
-                LogError(Category, ex.ToString());
-            }
-            if (message == null)
-            {
-                Log(Category, "Message is not a NatNeg message.");
-                return null;
-            }
-            else
-            {
-                Log(Category, "Parsed message:");
-                Log(Category, message.ToString());
-                if (message.RecordType == 0)
-                {
-                    // INIT, return INIT_ACK
-                    message.RecordType = 1;
-                    return message.ToBytes();
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
-
 		private void OnDataReceived(object sender, SocketAsyncEventArgs e)
 		{
-            // Description                                   gamename        gamekey
-            // Civilization IV: Beyond the Sword             civ4bts         Cs2iIq
-
-            // NatNeg implementation:
-            // See http://aluigi.altervista.org/papers/gsnatneg.c
-            // Protocol specification:
-            // http://wiki.tockdom.com/wiki/MKWii_Network_Protocol/Server/mariokartwii.natneg.gs.nintendowifi.net
+            /*
+             * Connection Protocol
+             * 
+             * From http://wiki.tockdom.com/wiki/MKWii_Network_Protocol/Server/mariokartwii.natneg.gs.nintendowifi.net
+             * 
+             * The NATNEG communication to enable a peer to peer communication is is done in the following steps:
+             * 
+             * Both clients (called guest and host to distinguish them) exchange an unique natneg-id. In all observed Wii games this communication is done using Server MS and Server MASTER.
+             * Both clients sends independent of each other a sequence of 4 INIT packets to the NATNEG servers. The sequence number goes from 0 to 3. The guest sets the host_flag to 0 and the host to 1. The natneg-id must be the same for all packets.
+             * Packet 0 (sequence number 0) is send from the public address to server NATNEG1. This public address is later used for the peer to peer communication.
+             * Packet 1 (sequence number 1) is send from the communication address (usually an other port than the public address) to server NATNEG1.
+             * Packet 2 (sequence number 2) is send from the communication address to server NATNEG2 (any kind of fallback?).
+             * Packet 3 (sequence number 3) is send from the communication address to server NATNEG3 (any kind of fallback?).
+             * Each INIT packet is answered by an INIT_ACK packet as acknowledge to the original sender.
+             * If server NATNEG1 have received all 4 INIT packets with sequence numbers 0 and 1 (same natneg-id), then it sends 2 CONNECT packets:
+             * One packet is send to the communication address of the guest. The packet contains the public address of the host as data.
+             * The other packet is send to the communication address of the host. The packet contains the public address of the quest as data.
+             * Both clients send back a CONNECT_ACK packet to NATNEG1 as acknowledge.
+             * Both clients start peer to peer communication using the public addresses.
+             * 
+             * C implementation:
+             * See http://aluigi.altervista.org/papers/gsnatneg.c
+             * 
+             * See also encryption details: http://aluigi.altervista.org/papers/gsmsalg.h
+             * 
+             * Game names and game keys:
+             * Civilization IV: Beyond the Sword             civ4bts         Cs2iIq
+             * Mario Kart Wii (Wii)                          mariokartwii    9r3Rmy
+             * 
+             */
 			try {
 				IPEndPoint remote = (IPEndPoint)e.RemoteEndPoint;
 
 				byte[] receivedBytes = new byte[e.BytesTransferred];
 				Array.Copy(e.Buffer, e.Offset, receivedBytes, 0, e.BytesTransferred);
-                byte[] response = ProcessMessage(receivedBytes);
-                if (response != null)
+
+                NatNegMessage message = null;
+                try
                 {
-                    Log(Category, "Sending response: ");
-                    Log(Category, string.Join(" ", response.Select((b) => { return b.ToString("X2"); }).ToArray()));
-                    _socket.SendTo(response, remote);
+                    message = NatNegMessage.ParseData(receivedBytes);
+                }
+                catch (Exception ex)
+                {
+                    LogError(Category, ex.ToString());
+                }
+                if (message == null)
+                {
+                    Log(Category, "Received unknown data " + string.Join(" ", receivedBytes.Select((b) => { return b.ToString("X2"); }).ToArray()) + " from " + remote.ToString() );
+                }
+                else
+                {
+                    Log(Category, "Received message " + message.ToString() + " from " + remote.ToString());
+                    Log(Category, "(Message bytes: " + string.Join(" ", receivedBytes.Select((b) => { return b.ToString("X2"); }).ToArray()) + ")");
+                    if (message.RecordType == 0)
+                    {
+                        // INIT, return INIT_ACK
+                        message.RecordType = 1;
+                        SendResponse(remote, message);
+
+                        if (message.SequenceId > 1)
+                        {
+                            // Failover messages sent to natneg2 and natneg3, ignore.
+                        }
+                        else
+                        {
+                            // Collect data and send CONNECT messages if you have two peers initialized with all necessary data
+                            if (!_Clients.ContainsKey(message.ClientId)) _Clients[message.ClientId] = new NatNegClient();
+                            NatNegClient client = _Clients[message.ClientId];
+                            client.ClientId = message.ClientId;
+                            bool isHost = message.Hoststate > 0;
+                            NatNegPeer peer = isHost ? client.Host : client.Guest;
+                            if(peer == null) {
+                                peer = new NatNegPeer();
+                                if(isHost) client.Host = peer; else client.Guest = peer;
+                            }
+                            peer.IsHost = isHost;
+                            if(message.SequenceId == 0)
+                                peer.PublicAddress = remote;
+                            else
+                                peer.CommunicationAddress = remote;
+
+                            if(client.Guest != null && client.Guest.CommunicationAddress != null && client.Guest.PublicAddress != null && client.Host != null && client.Host.CommunicationAddress != null && client.Host.PublicAddress != null) {
+                                /* If server NATNEG1 have received all 4 INIT packets with sequence numbers 0 and 1 (same natneg-id), then it sends 2 CONNECT packets:
+                                 * One packet is send to the communication address of the guest. The packet contains the public address of the host as data.
+                                 * The other packet is send to the communication address of the host. The packet contains the public address of the quest as data.
+                                 */
+
+                                // Remove client from dictionary
+                                NatNegClient removed = null;
+                                _Clients.TryRemove(client.ClientId, out removed);
+
+                                message.RecordType = 5;
+                                message.Error = 0;
+                                message.GotData = 0x42;
+
+                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.PublicAddress.Address.GetAddressBytes());
+                                message.ClientPublicPort = (ushort)client.Host.PublicAddress.Port;
+                                SendResponse(client.Guest.CommunicationAddress, message);
+
+                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.PublicAddress.Address.GetAddressBytes());
+                                message.ClientPublicPort = (ushort)client.Guest.PublicAddress.Port;
+                                SendResponse(client.Host.CommunicationAddress, message);
+
+                                Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.PublicAddress.ToString() + " and guest " + client.Guest.PublicAddress.ToString());
+                            }
+                        }
+                    }
+                    else if (message.RecordType == 13)
+                    {
+                        // REPORT, return REPORT_ACK
+                        message.RecordType = 14;
+                        SendResponse(remote, message);
+                    }
                 }
 			} catch (Exception ex) {
 				LogError(Category, ex.ToString());
@@ -196,6 +256,14 @@ namespace PRMasterServer.Servers
 
 			WaitForData();
 		}
+
+        private void SendResponse(IPEndPoint remote, NatNegMessage message)
+        {
+            byte[] response = message.ToBytes();
+            Log(Category, "Sending response " + message.ToString() + " to " + remote.ToString() + ": " + remote.Port);
+            Log(Category, "(Response bytes: " + string.Join(" ", response.Select((b) => { return b.ToString("X2"); }).ToArray()) + ")");
+            _socket.SendTo(response, remote);
+        }
 
     }
 }
