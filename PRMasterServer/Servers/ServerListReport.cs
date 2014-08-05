@@ -36,7 +36,8 @@ namespace PRMasterServer.Servers
 		private byte[] _socketReceivedBuffer;
 
 		// 09 then 4 00's then battlefield2
-		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x62, 0x61, 0x74, 0x74, 0x6c, 0x65, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x32, 0x00 };
+
+		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x63, 0x69, 0x76, 0x34, 0x62, 0x74, 0x73, 0x00 };
 
 		public ServerListReport(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError)
 		{
@@ -202,49 +203,61 @@ namespace PRMasterServer.Servers
 				Array.Copy(e.Buffer, e.Offset, receivedBytes, 0, e.BytesTransferred);
 				
 				// there by a bunch of different message formats...
-				
-				if (receivedBytes.SequenceEqual(_initialMessage)) {
-					// the initial message is basically the gamename, 0x09 0x00 0x00 0x00 0x00 battlefield2
-					// reply back a good response
-					byte[] response = new byte[] { 0xfe, 0xfd, 0x09, 0x00, 0x00, 0x00, 0x00 };
-					_socket.SendTo(response, remote);
-				} else if (receivedBytes.Length > 5 && receivedBytes[0] == 0x03) {
-					// this is where server details come in, it starts with 0x03, it happens every 60 seconds or so
-					
-					byte[] uniqueId = new byte[4];
-					Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
 
-					if (!ParseServerDetails(remote, receivedBytes.Skip(5).ToArray())) {
-						// this should be some sort of proper encrypted challenge, but for now i'm just going to hard code it because I don't know how the encryption works...
-						byte[] response = new byte[] { 0xfe, 0xfd, 0x01, uniqueId[0], uniqueId[1], uniqueId[2], uniqueId[3], 0x44, 0x3d, 0x73, 0x7e, 0x6a, 0x59, 0x30, 0x30, 0x37, 0x43, 0x39, 0x35, 0x41, 0x42, 0x42, 0x35, 0x37, 0x34, 0x43, 0x43, 0x00 };
-						_socket.SendTo(response, remote);
-					}
-				} else if (receivedBytes.Length > 5 && receivedBytes[0] == 0x01) {
-					// this is a challenge response, it starts with 0x01
-					
-					byte[] uniqueId = new byte[4];
-					Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
+                if (receivedBytes.SequenceEqual(_initialMessage))
+                {
+                    // the initial message is basically the gamename, 0x09 0x00 0x00 0x00 0x00 battlefield2
+                    // reply back a good response
+                    byte[] response = new byte[] { 0xfe, 0xfd, 0x09, 0x00, 0x00, 0x00, 0x00 };
+                    _socket.SendTo(response, remote);
+                }
+                else
+                {
+                    if (receivedBytes.Length > 5 && receivedBytes[0] == 0x03)
+                    {
+                        // this is where server details come in, it starts with 0x03, it happens every 60 seconds or so
 
-					// confirm against the hardcoded challenge
-					byte[] validate = new byte[] { 0x72, 0x62, 0x75, 0x67, 0x4a, 0x34, 0x34, 0x64, 0x34, 0x7a, 0x2b, 0x66, 0x61, 0x78, 0x30, 0x2f, 0x74, 0x74, 0x56, 0x56, 0x46, 0x64, 0x47, 0x62, 0x4d, 0x7a, 0x38, 0x41, 0x00 };
-					byte[] clientResponse = new byte[validate.Length];
-					Array.Copy(receivedBytes, 5, clientResponse, 0, clientResponse.Length);
+                        byte[] uniqueId = new byte[4];
+                        Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
 
-					// if we validate, reply back a good response
-					if (clientResponse.SequenceEqual(validate)) {
-						byte[] response = new byte[] { 0xfe, 0xfd, 0x0a, uniqueId[0], uniqueId[1], uniqueId[2], uniqueId[3] };
-						_socket.SendTo(response, remote);
+                        if (!ParseServerDetails(remote, receivedBytes.Skip(5).ToArray()))
+                        {
+                            // this should be some sort of proper encrypted challenge, but for now i'm just going to hard code it because I don't know how the encryption works...
+                            byte[] response = new byte[] { 0xfe, 0xfd, 0x01, uniqueId[0], uniqueId[1], uniqueId[2], uniqueId[3], 0x44, 0x3d, 0x73, 0x7e, 0x6a, 0x59, 0x30, 0x30, 0x37, 0x43, 0x39, 0x35, 0x41, 0x42, 0x42, 0x35, 0x37, 0x34, 0x43, 0x43, 0x00 };
+                            _socket.SendTo(response, remote);
+                        }
+                    }
+                    else if (receivedBytes.Length > 5 && receivedBytes[0] == 0x01)
+                    {
+                        // this is a challenge response, it starts with 0x01
 
-						AddValidServer(remote);
-					}
-				} else if (receivedBytes.Length == 5 && receivedBytes[0] == 0x08) {
-					// this is a server ping, it starts with 0x08, it happens every 20 seconds or so
-					
-					byte[] uniqueId = new byte[4];
-					Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
+                        byte[] uniqueId = new byte[4];
+                        Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
 
-					RefreshServerPing(remote);
-				}
+                        // confirm against the hardcoded challenge
+                        byte[] validate = new byte[] { 0x72, 0x62, 0x75, 0x67, 0x4a, 0x34, 0x34, 0x64, 0x34, 0x7a, 0x2b, 0x66, 0x61, 0x78, 0x30, 0x2f, 0x74, 0x74, 0x56, 0x56, 0x46, 0x64, 0x47, 0x62, 0x4d, 0x7a, 0x38, 0x41, 0x00 };
+                        byte[] clientResponse = new byte[validate.Length];
+                        Array.Copy(receivedBytes, 5, clientResponse, 0, clientResponse.Length);
+
+                        // if we validate, reply back a good response
+                        if (clientResponse.SequenceEqual(validate))
+                        {
+                            byte[] response = new byte[] { 0xfe, 0xfd, 0x0a, uniqueId[0], uniqueId[1], uniqueId[2], uniqueId[3] };
+                            _socket.SendTo(response, remote);
+
+                            AddValidServer(remote);
+                        }
+                    }
+                    else if (receivedBytes.Length == 5 && receivedBytes[0] == 0x08)
+                    {
+                        // this is a server ping, it starts with 0x08, it happens every 20 seconds or so
+
+                        byte[] uniqueId = new byte[4];
+                        Array.Copy(receivedBytes, 1, uniqueId, 0, 4);
+
+                        RefreshServerPing(remote);
+                    }
+                }
 			} catch (Exception ex) {
 				LogError(Category, ex.ToString());
 			}

@@ -30,12 +30,14 @@ namespace PRMasterServer.Servers
 		private SocketAsyncEventArgs _socketReadEvent;
 		private byte[] _socketReceivedBuffer;
         private ConcurrentDictionary<int, NatNegClient> _Clients = new ConcurrentDictionary<int,NatNegClient>();
+        private bool useCommAddress = false;
 
 		// 09 then 4 00's then battlefield2
 		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x62, 0x61, 0x74, 0x74, 0x6c, 0x65, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x32, 0x00 };
 
-		public ServerNatNeg(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError)
+		public ServerNatNeg(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError, bool useCommAddress)
 		{
+            this.useCommAddress = useCommAddress;
 			Log = log;
 			LogError = logError;
 
@@ -197,7 +199,7 @@ namespace PRMasterServer.Servers
 
                         if (message.SequenceId > 1)
                         {
-                            // Failover messages sent to natneg2 and natneg3, ignore.
+                            // Messages sent to natneg2 and natneg3, they only require an INIT_ACK. Used by client to determine NAT mapping mode?
                         }
                         else
                         {
@@ -231,15 +233,31 @@ namespace PRMasterServer.Servers
                                 message.Error = 0;
                                 message.GotData = 0x42;
 
-                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.PublicAddress.Address.GetAddressBytes());
-                                message.ClientPublicPort = (ushort)client.Host.PublicAddress.Port;
-                                SendResponse(client.Guest.CommunicationAddress, message);
+                                if (!useCommAddress)
+                                {
+                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.PublicAddress.Address.GetAddressBytes());
+                                    message.ClientPublicPort = (ushort)client.Host.PublicAddress.Port;
+                                    SendResponse(client.Guest.CommunicationAddress, message);
 
-                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.PublicAddress.Address.GetAddressBytes());
-                                message.ClientPublicPort = (ushort)client.Guest.PublicAddress.Port;
-                                SendResponse(client.Host.CommunicationAddress, message);
+                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.PublicAddress.Address.GetAddressBytes());
+                                    message.ClientPublicPort = (ushort)client.Guest.PublicAddress.Port;
+                                    SendResponse(client.Host.CommunicationAddress, message);
 
-                                Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.PublicAddress.ToString() + " and guest " + client.Guest.PublicAddress.ToString());
+                                    Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.PublicAddress.ToString() + " and guest " + client.Guest.PublicAddress.ToString());
+                                }
+                                else
+                                {
+
+                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.CommunicationAddress.Address.GetAddressBytes());
+                                    message.ClientPublicPort = (ushort)client.Host.CommunicationAddress.Port;
+                                    SendResponse(client.Guest.CommunicationAddress, message);
+
+                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.CommunicationAddress.Address.GetAddressBytes());
+                                    message.ClientPublicPort = (ushort)client.Guest.CommunicationAddress.Port;
+                                    SendResponse(client.Host.CommunicationAddress, message);
+
+                                    Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.CommunicationAddress.ToString() + " and guest " + client.Guest.CommunicationAddress.ToString());
+                                }
                             }
                         }
                     }
@@ -260,7 +278,7 @@ namespace PRMasterServer.Servers
         private void SendResponse(IPEndPoint remote, NatNegMessage message)
         {
             byte[] response = message.ToBytes();
-            Log(Category, "Sending response " + message.ToString() + " to " + remote.ToString() + ": " + remote.Port);
+            Log(Category, "Sending response " + message.ToString() + " to " + remote.ToString());
             Log(Category, "(Response bytes: " + string.Join(" ", response.Select((b) => { return b.ToString("X2"); }).ToArray()) + ")");
             _socket.SendTo(response, remote);
         }

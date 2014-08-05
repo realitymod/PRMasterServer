@@ -92,8 +92,8 @@ namespace PRMasterServer.Servers
                 msg.PortType = msg.RecordSpecificData[4];
                 msg.Hoststate = msg.RecordSpecificData[5];
                 msg.NatNegResult = msg.RecordSpecificData[6];
-                msg.NatType = _toInt(_getBytes(msg.RecordSpecificData, 7, 4));
-                msg.NatMappingScheme = _toInt(_getBytes(msg.RecordSpecificData, 11, 4));
+                msg.NatType = _toIntBigEndian(_getBytes(msg.RecordSpecificData, 7, 4));
+                msg.NatMappingScheme = _toIntBigEndian(_getBytes(msg.RecordSpecificData, 11, 4));
                 msg.GameName = _toString(_getBytes(msg.RecordSpecificData, 15, msg.RecordSpecificData.Length - 15));
             }
             return msg;
@@ -183,7 +183,13 @@ namespace PRMasterServer.Servers
             return (int)bytes[0] * 256 * 256 * 256 + (int)bytes[1] * 256 * 256 + (int)bytes[2] * 256 + bytes[3];
         }
 
-        private static ushort _toShort(byte[] bytes) {
+        private static int _toIntBigEndian(byte[] bytes)
+        {
+            return (int)bytes[3] * 256 * 256 * 256 + (int)bytes[2] * 256 * 256 + (int)bytes[1] * 256 + bytes[0];
+        }
+
+        private static ushort _toShort(byte[] bytes)
+        {
             return (ushort)(bytes[0] * 256 + bytes[1]);
         }
 

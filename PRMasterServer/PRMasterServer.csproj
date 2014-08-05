@@ -108,6 +108,10 @@
     <Content Include="Data\log.txt" />
     <Content Include="Data\log2.txt" />
     <Content Include="Data\log3.txt" />
+    <Content Include="Data\log4.txt" />
+    <Content Include="Data\log5.txt" />
+    <Content Include="Data\log6.txt" />
+    <Content Include="Data\log7.txt" />
     <Content Include="External\Reality.Net.dll" />
     <Content Include="Images\search.ico" />
     <Content Include="x64\SQLite.Interop.dll">

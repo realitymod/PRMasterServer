@@ -25,6 +25,15 @@ namespace PRMasterServer
 				}
 			};
 
+            bool useCommAddress = false;
+            for (int i = 0; i < args.Length; i++)
+            {
+                if (args[i].Equals("+useCommunicationAddress"))
+                {
+                    useCommAddress = true;
+                }
+            }
+
             IPAddress bind = IPAddress.Any;
             if (args.Length >= 1)
             {
@@ -59,9 +68,9 @@ namespace PRMasterServer
             //}
 
             //CDKeyServer cdKeyServer = new CDKeyServer(bind, 29910, log, logError);
-            //ServerListReport serverListReport = new ServerListReport(bind, 27900, log, logError);
+            ServerListReport serverListReport = new ServerListReport(bind, 27900, log, logError);
             //ServerListRetrieve serverListRetrieve = new ServerListRetrieve(bind, 28910, serverListReport, log, logError);
-            ServerNatNeg serverNatNeg = new ServerNatNeg(bind, 27901, log, logError);
+            ServerNatNeg serverNatNeg = new ServerNatNeg(bind, 27901, log, logError, useCommAddress);
             //LoginServer loginServer = new LoginServer(bind, 29900, 29901, log, logError);
 
 			while (true) {
