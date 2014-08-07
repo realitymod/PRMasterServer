@@ -36,11 +36,17 @@ namespace PRMasterServer.Servers
 		private byte[] _socketReceivedBuffer;
 
 		// 09 then 4 00's then battlefield2
+        private string _gameName = "battlefield2";
+		private byte[] _initialMessage;
 
-		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x63, 0x69, 0x76, 0x34, 0x62, 0x74, 0x73, 0x00 };
-
-		public ServerListReport(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError)
+		public ServerListReport(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError, string gameName)
 		{
+            if (gameName != null) _gameName = gameName;
+            List<byte> initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00 }.ToList();
+            initialMessage.AddRange(Encoding.ASCII.GetBytes(_gameName));
+            initialMessage.Add(0x00);
+            _initialMessage = initialMessage.ToArray();
+
 			Log = log;
 			LogError = logError;
 

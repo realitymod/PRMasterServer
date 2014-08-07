@@ -30,14 +30,9 @@ namespace PRMasterServer.Servers
 		private SocketAsyncEventArgs _socketReadEvent;
 		private byte[] _socketReceivedBuffer;
         private ConcurrentDictionary<int, NatNegClient> _Clients = new ConcurrentDictionary<int,NatNegClient>();
-        private bool useCommAddress = false;
 
-		// 09 then 4 00's then battlefield2
-		private readonly byte[] _initialMessage = new byte[] { 0x09, 0x00, 0x00, 0x00, 0x00, 0x62, 0x61, 0x74, 0x74, 0x6c, 0x65, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x32, 0x00 };
-
-		public ServerNatNeg(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError, bool useCommAddress)
+		public ServerNatNeg(IPAddress listen, ushort port, Action<string, string> log, Action<string, string> logError)
 		{
-            this.useCommAddress = useCommAddress;
 			Log = log;
 			LogError = logError;
 
@@ -77,25 +72,10 @@ namespace PRMasterServer.Servers
 			Dispose(false);
 		}
 
-        private byte[] ParseHexString(string hex)
-        {
-            string[] hexes = hex.Split(' ');
-            return hexes.Select((h) => { return (byte)Convert.ToInt32(h, 16); }).ToArray();
-        }
-
 		private void StartServer(object parameter)
 		{
 			AddressInfo info = (AddressInfo)parameter;
-
 			Log(Category, "Starting Nat Neg Listener");
-
-            //byte[] response = ProcessMessage(ParseHexString("FD FC 1E 66 6A B2 03 00 11 6C 5D 5E 03 01 01 C0 A8 00 C7 08 0E 63 69 76 34 62 74 73 00"));
-            //if (response != null)
-            //{
-            //    Log(Category, "Response: ");
-            //    Log(Category, string.Join(" ", response.Select((b) => { return b.ToString("X2"); }).ToArray()));
-            //}
-
 			try {
 				_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp) {
 					SendTimeout = 5000,
@@ -160,8 +140,6 @@ namespace PRMasterServer.Servers
              * 
              * C implementation:
              * See http://aluigi.altervista.org/papers/gsnatneg.c
-             * 
-             * See also encryption details: http://aluigi.altervista.org/papers/gsmsalg.h
              * 
              * Game names and game keys:
              * Civilization IV: Beyond the Sword             civ4bts         Cs2iIq
@@ -233,31 +211,15 @@ namespace PRMasterServer.Servers
                                 message.Error = 0;
                                 message.GotData = 0x42;
 
-                                if (!useCommAddress)
-                                {
-                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.PublicAddress.Address.GetAddressBytes());
-                                    message.ClientPublicPort = (ushort)client.Host.PublicAddress.Port;
-                                    SendResponse(client.Guest.CommunicationAddress, message);
+                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.PublicAddress.Address.GetAddressBytes());
+                                message.ClientPublicPort = (ushort)client.Host.PublicAddress.Port;
+                                SendResponse(client.Guest.CommunicationAddress, message);
 
-                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.PublicAddress.Address.GetAddressBytes());
-                                    message.ClientPublicPort = (ushort)client.Guest.PublicAddress.Port;
-                                    SendResponse(client.Host.CommunicationAddress, message);
+                                message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.PublicAddress.Address.GetAddressBytes());
+                                message.ClientPublicPort = (ushort)client.Guest.PublicAddress.Port;
+                                SendResponse(client.Host.CommunicationAddress, message);
 
-                                    Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.PublicAddress.ToString() + " and guest " + client.Guest.PublicAddress.ToString());
-                                }
-                                else
-                                {
-
-                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Host.CommunicationAddress.Address.GetAddressBytes());
-                                    message.ClientPublicPort = (ushort)client.Host.CommunicationAddress.Port;
-                                    SendResponse(client.Guest.CommunicationAddress, message);
-
-                                    message.ClientPublicIPAddress = NatNegMessage._toIpAddress(client.Guest.CommunicationAddress.Address.GetAddressBytes());
-                                    message.ClientPublicPort = (ushort)client.Guest.CommunicationAddress.Port;
-                                    SendResponse(client.Host.CommunicationAddress, message);
-
-                                    Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.CommunicationAddress.ToString() + " and guest " + client.Guest.CommunicationAddress.ToString());
-                                }
+                                Log(Category, "Sent connect messages to peers with clientId " + client.ClientId + " connecting host " + client.Host.PublicAddress.ToString() + " and guest " + client.Guest.PublicAddress.ToString());
                             }
                         }
                     }

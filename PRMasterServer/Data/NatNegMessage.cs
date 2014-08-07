@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace PRMasterServer.Servers
+namespace PRMasterServer.Data
 {
     public class NatNegMessage
     {
@@ -14,7 +14,7 @@ namespace PRMasterServer.Servers
         public byte[] RecordSpecificData;
 
         public int ClientId;
-        public byte SequenceId; // ? (0x00 to 0x03)
+        public byte SequenceId; // (0x00 to 0x03)
         public byte Hoststate; // (0x00 for guest, 0x01 for host)
         public byte UseGamePort;
         public string PrivateIPAddress;
@@ -42,10 +42,6 @@ namespace PRMasterServer.Servers
 
         public override string ToString()
         {
-            //XmlSerializer ser = new XmlSerializer(typeof(NatNegMessage));
-            //System.IO.StringWriter writer = new System.IO.StringWriter();
-            //ser.Serialize(writer, this);
-            //return writer.ToString();
             if (RecordType == 0) return "INIT CLIENT " + ClientId + " SEQUENCE " + SequenceId + " HOSTSTATE " + Hoststate + " USEGAMEPORT " + UseGamePort + " PRIVATEIP " + PrivateIPAddress + " LOCALPORT " + LocalPort + " GAMENAME " + GameName;
             if (RecordType == 1) return "INIT_ACK CLIENT " + ClientId + " SEQUENCE " + SequenceId + " HOSTSTATE " + Hoststate;
             if (RecordType == 5) return "CONNECT CLIENT " + ClientId + " CLIENTPUBLICIP " + ClientPublicIPAddress + " CLIENTPUBLICPORT " + ClientPublicPort + " GOTDATA " + GotData + " ERROR " + Error;

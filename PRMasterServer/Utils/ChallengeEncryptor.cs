@@ -5,7 +5,10 @@ using System.Text;
 
 namespace PRMasterServer.Utils
 {
-    // Manually converted from http://aluigi.altervista.org/papers/gsmsalg.h
+    /// <summary>
+    /// This code was started because I mistakenly thought that the NatNeg protocol used the Gamespy challenge encryption scheme. It doesn't, but this code remains, in case someone needs it for other uses.
+    /// The code was manually converted to C# from http://aluigi.altervista.org/papers/gsmsalg.h
+    /// </summary>
     public class ChallengeEncryptor
     {
         private static byte[] enctype1_data {

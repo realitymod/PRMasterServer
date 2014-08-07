@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace PRMasterServer.Servers
+namespace PRMasterServer.Data
 {
     public class NatNegPeer
     {
