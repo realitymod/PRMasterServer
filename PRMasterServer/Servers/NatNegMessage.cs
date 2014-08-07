@@ -175,7 +175,7 @@ namespace PRMasterServer.Servers
 
         private static void _addIPAddress(List<byte> bytes, string address)
         {
-            bytes.AddRange(address.Split('.').Select((b) => { return (byte)Convert.ToInt32(b, 16); }));
+            bytes.AddRange(address.Split('.').Select((b) => { return (byte)Convert.ToInt32(b); }));
         }
 
         private static int _toInt(byte[] bytes)
